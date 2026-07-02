@@ -1,0 +1,24 @@
+{
+  "name": "blog.rubot.v2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubot99/blog.rubot.v2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rubot99/blog.rubot.v2/issues"
+  },
+  "homepage": "https://github.com/rubot99/blog.rubot.v2#readme",
+  "type": "module",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}
