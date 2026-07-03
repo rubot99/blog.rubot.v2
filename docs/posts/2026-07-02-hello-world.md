@@ -1,7 +1,13 @@
 ---
-date: 2026-07-02
+date: 
+  created: 2026-07-02
+  updated: 2026-07-03
 categories:
-  - Architecture
+  - Tech
+tags:
+  - technology
+authors:
+  - rubot
 draft: true
 ---
 

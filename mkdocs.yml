@@ -1,6 +1,6 @@
-site_name: Rubot
+site_name: rubot.co.uk
 site_url: https://rubot.co.uk
-site_description: "EDIT ME: one sentence on what this blog is about"
+site_description: "I'm interested in cloud development, distributed systems and information security. I do enjoy tinkering with linux distros and smart home technologies"
 site_author: Reuben Raj
 
 repo_url: https://github.com/rubot99/blog.rubot.v2
@@ -13,6 +13,7 @@ copyright: >
 
 theme:
   name: material
+  custom_dir: overrides
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -42,19 +43,25 @@ plugins:
       post_url_format: "{slug}"
       archive: true
       archive_name: Archive
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
       categories: true
       categories_allowed:
         - Architecture
         - Books
+        - Tech
       draft: false
       draft_on_serve: true
       pagination_per_page: 10
-  - tags
+  - tags:
+      tags_file: tags.md
   - search
   - rss:
       match_path: posts/.*
+      pretty_print: true
       date_from_meta:
-        as_creation: date
+        as_creation: date.created
+        as_update: date.updated
       categories:
         - categories
         - tags
@@ -83,4 +90,4 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/rubot99
     - icon: fontawesome/brands/linkedin
-      link: "EDIT ME: your LinkedIn URL, or delete this entry"
+      link: "www.linkedin.com/in/reuben-raj-9b550759"

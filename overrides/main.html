@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  <script data-goatcounter="https://rubot.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+
+  {% set social_title = page.title if page and page.title else config.site_name %}
+  {% set social_description = page.meta.description if page and page.meta and page.meta.description else config.site_description %}
+  {% set social_image = config.site_url ~ "assets/social-card.png" %}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ social_title }}">
+  <meta property="og:description" content="{{ social_description }}">
+  <meta property="og:image" content="{{ social_image }}">
+  <meta property="og:url" content="{{ page.canonical_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ social_image }}">
+{% endblock %}
