@@ -8,7 +8,7 @@ tags:
   - technology
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # Hello, world
