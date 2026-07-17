@@ -1,7 +1,7 @@
-site_name: rubot.co.uk
+site_name: "rubot — thoughts from a software engineer"
 site_url: https://rubot.co.uk
-site_description: "I'm interested in cloud development, distributed systems and information security. I do enjoy tinkering with linux distros and smart home technologies"
-site_author: Reuben Raj
+site_description: "Reuben's blog — a software engineer in Newcastle upon Tyne writing about distributed systems, architecture, and whatever else catches his interest."
+site_author: Reuben
 
 repo_url: https://github.com/rubot99/blog.rubot.v2
 repo_name: rubot99/blog.rubot.v2
@@ -56,12 +56,12 @@ plugins:
       draft: false
       draft_on_serve: true
       pagination_per_page: 10
-  - tags:
-      tags_file: tags.md
+  - tags
   - search
   - rss:
       match_path: posts/.*
       pretty_print: true
+      image: https://rubot.co.uk/assets/favicon.png
       date_from_meta:
         as_creation: date.created
         as_update: date.updated
@@ -90,6 +90,8 @@ markdown_extensions:
 
 extra:
   social:
+    - icon: fontawesome/solid/rss
+      link: /feed_rss_created.xml
     - icon: fontawesome/brands/github
       link: https://github.com/rubot99
     - icon: fontawesome/brands/linkedin
