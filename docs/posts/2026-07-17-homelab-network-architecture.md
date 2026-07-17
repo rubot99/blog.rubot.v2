@@ -9,7 +9,7 @@ tags:
   - unifi
 authors:
   - rubot
-draft: false
+draft: true
 ---
 
 # Home lab, part 2: network architecture and VLAN segmentation
