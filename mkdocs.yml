@@ -15,6 +15,8 @@ theme:
   name: material
   custom_dir: overrides
   favicon: assets/favicon.png
+  icon:
+    logo: material/robot
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
