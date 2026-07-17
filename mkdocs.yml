@@ -14,6 +14,7 @@ copyright: >
 theme:
   name: material
   custom_dir: overrides
+  favicon: assets/favicon.png
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -90,4 +91,4 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/rubot99
     - icon: fontawesome/brands/linkedin
-      link: "www.linkedin.com/in/reuben-raj-9b550759"
+      link: "https://www.linkedin.com/in/reuben-raj-9b550759"
