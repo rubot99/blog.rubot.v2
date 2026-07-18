@@ -1,8 +1,8 @@
 ---
 date:
-  created: 2026-07-17
+  created: 2026-07-15
 categories:
-  - Architecture
+  - Homelab
 tags:
   - homelab
   - networking

@@ -1,8 +1,8 @@
 ---
 date:
-  created: 2026-07-15
+  created: 2026-07-13
 categories:
-  - Architecture
+  - Homelab
 tags:
   - homelab
   - hardware

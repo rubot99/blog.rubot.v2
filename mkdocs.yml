@@ -53,6 +53,9 @@ plugins:
         - Architecture
         - Books
         - Tech
+        - Homelab
+        - Self-Hosting
+        - Development
       draft: false
       draft_on_serve: true
       pagination_per_page: 10
