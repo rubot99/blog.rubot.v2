@@ -10,7 +10,7 @@ tags:
   - hardware
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # The Asymmetric Dev, part 1: reclaiming Unix velocity on rescued hardware
