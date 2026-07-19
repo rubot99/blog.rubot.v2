@@ -15,7 +15,7 @@ draft: true
 
 # The Asymmetric Dev, part 1: reclaiming Unix velocity on rescued hardware
 
-It started at my day job. For years, I had been issued a 15-inch Dell XPS. To call it a "laptop" was a generous stretch of the imagination; it was a portable space heater. It was incredibly noisy, ran white-hot, and frequently threw thermal throttling tantrums. I reached a point where I had to physically elevate the chassis and point a literal desk fan at it just to compile a codebase without a hard lockup.
+It started at my day job. For years, I had been issued a 15-inch Dell XPS. To call it a "laptop" was a generous stretch of the imagination; it was a portable space heater. It was incredibly noisy, ran white-hot, and frequently threw thermal throttling tantrums. I reached a point where I had to physically elevate the chassis and point a literal desk fan at it just to keep it cool.
 
 Then, the company upgraded us to M2 MacBook Airs.
 
@@ -37,17 +37,17 @@ As a software engineer, a different part of my brain kicked in. I looked around 
 - A low-powered, tiny **Lenovo ThinkCentre mini PC**.
 - A modern, muscular **workstation** outfitted with a dedicated Nvidia graphics card.
 
-Left alone, these machines were either destined for a landfill skip or a low-value electronics refurbishment center. They were local e-waste in the making.
+Left alone, the mini pc and laptop were either destined for a landfill skip or a low-value electronics refurbishment center. They were local e-waste in the making.
 
 That's when the architectural challenge hit me: **could I use software to beat the hardware market?** Could I breathe fresh life into these older, disparate x86 machines, eliminate e-waste, save thousands of pounds, and stitch them together into a unified development environment that mirrored the Unix fluidity I fell in love with at work?
 
 ## Designing for my life, not a vacuum
 
-There was a physical constraint to this engineering problem, too. My wife and I both work from home. Our shared office space means that during the day, keeping the peace is paramount.
+There was a physical constraint to this engineering problem, too. My wife and I both work from home. Our shared office space means that during the day, having quiet work environments is paramount.
 
 I couldn't just sit at my high-powered, fan-spinning workstation during daylight hours without creating a wall of ambient noise. I needed an asymmetric, distributed strategy:
 
-1. **The daytime, low-power tier:** use the silent, low-spec ThinkCentre mini PC and the Latitude laptop for documentation, basic script editing, video tutorials, and lightweight browsing while sharing the room.
+1. **The daytime, low-power tier:** use the silent, low-spec ThinkCentre mini PC and the Latitude laptop for documentation, basic script editing, video tutorials, and lightweight browsing.
 2. **The nighttime power tier:** fire up the Nvidia workstation in the evening for heavy-duty, multi-threaded development sessions when the office was mine.
 
 The ultimate goal was absolute environment parity. I wanted a fluid, zero-friction workflow where I could sit down at *any* of these three vastly different machines, open a terminal, and experience the exact same configuration, muscle memory, and velocity.

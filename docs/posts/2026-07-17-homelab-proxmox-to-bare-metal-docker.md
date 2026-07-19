@@ -9,7 +9,7 @@ tags:
   - proxmox
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # Home lab, part 3: from Proxmox to bare-metal Docker
