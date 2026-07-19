@@ -9,7 +9,7 @@ tags:
   - unifi
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # Home lab, part 2: network architecture and VLAN segmentation
@@ -31,7 +31,7 @@ The high-level layout and any config notes for this setup live in the [`homelab`
 
 | VLAN | Name | Subnet (redacted) | Purpose |
 |---|---|---|---|
-| 1 | Default | `10.20.1.0/24` | Catch-all for anything not explicitly placed elsewhere |
+| 1 | Default | `10.20.1.0/24` | Default VLAN created by the UniFi product |
 | 2 | Trusted | `10.20.2.0/24` | Personal devices — laptops, phones, and the services I access directly, like Plex and Navidrome |
 | 3 | IoT | `10.20.3.0/24` | Smart home devices, plus casting hardware (Chromecasts, Fire Sticks) |
 | 4 | Surveillance | `10.20.4.0/24` | Cameras and recording infrastructure |
@@ -64,17 +64,28 @@ flowchart LR
     end
 
     iot -. "allow: Plex, Navidrome" .-> trusted
+    trusted -. "allow: manage IoT devices" .-> iot
 ```
 
 The default-deny posture means a compromised smart plug on the IoT VLAN can't casually port-scan its way into Management or Lab — it has no route there unless a rule says otherwise. Writing policy at the zone level rather than per-VLAN also means adding an eighth or ninth network later doesn't require re-deriving the whole rule set; it just gets dropped into whichever zone matches its trust level.
 
-## The one deliberate hole: casting to Plex and Navidrome
+## Two deliberate holes: casting to Plex/Navidrome, and managing IoT devices
 
 Plex and Navidrome run on the Trusted VLAN, in the Secure zone. Chromecasts and Fire Sticks live on IoT, in the Unsecure zone — they're consumer devices running vendor firmware I don't control, so they belong there, not on Trusted. Left alone, the default-deny rule between zones would block casting entirely, since a Chromecast starting a stream needs to reach Plex directly.
 
 Rather than either moving the casting hardware onto Trusted (which defeats the point of having an IoT boundary) or opening IoT → Trusted wholesale (same problem, worse), the fix is a single scoped allow rule: source IoT, destination the specific Trusted hosts running Plex and Navidrome, limited to the ports those two services actually listen on. Casting works, and IoT devices still can't reach anything else on Trusted, or anything at all on Management or Lab.
 
-It's a small rule, but it's the shape every future exception should take: narrow enough that granting it doesn't quietly widen the zone boundary it's punching through.
+The second hole runs the other way: Trusted → IoT is allowed, so I can reach IoT devices directly from Trusted — checking a smart plug's local web UI, hitting a device's API — without hopping onto the IoT network itself. The rule also permits the return traffic for those connections, so replies make it back to Trusted; it doesn't open any IoT-initiated traffic beyond the Plex/Navidrome exception above.
+
+It's a small pair of rules, but they're the shape every future exception should take: narrow enough that granting them doesn't quietly widen the zone boundary they're punching through.
+
+## Additional resources
+
+- [
+Complete UniFi Network Configuration Guide (2025/2026)](https://youtu.be/gRtZWqNwALA?si=tpF-UJYik2sty4Eo)
+- [
+Full Unifi Config - Setup from Start to Finish](https://youtu.be/pbgM6Cyh_BY?si=wkS3WfyTLIdh7687)
+- [Homelab Repo](https://github.com/rubot99/homelab)
 
 ## Coming up next
 

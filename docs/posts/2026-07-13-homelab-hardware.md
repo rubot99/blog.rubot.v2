@@ -9,6 +9,7 @@ tags:
   - unifi
 authors:
   - rubot
+draft: false
 ---
 
 # Home lab, part 1: hardware and physical setup
