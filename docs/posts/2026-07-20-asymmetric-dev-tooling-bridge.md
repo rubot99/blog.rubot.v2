@@ -12,7 +12,7 @@ tags:
   - git
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # The Asymmetric Dev, part 2: the tooling bridge and unified environment
