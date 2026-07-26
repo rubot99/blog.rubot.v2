@@ -9,7 +9,7 @@ tags:
   - reverse-proxy
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # Home lab, part 4: reverse proxy migration, Nginx Proxy Manager to Caddy
@@ -20,7 +20,7 @@ draft: true
 
 ## What NPM was for
 
-Nginx Proxy Manager did its job well for a long time. It's Nginx underneath, but you never touch a config file directly — you add a proxy host through a web UI, point it at a host and port, tick a box for SSL, and Let's Encrypt certs get issued and renewed for you. For getting a home lab's first few services exposed behind HTTPS without learning Nginx's directive syntax, that's a genuinely good trade.
+Nginx Proxy Manager did its job well for a long time. To configure NPM, you never touch a config file directly — you add a proxy host through a web UI, point it at a host and port, tick a box for SSL, and Let's Encrypt certs get issued and renewed for you. For getting a home lab's first few services exposed behind HTTPS without learning Nginx's directive syntax, that's a genuinely good trade.
 
 ## Why I moved anyway
 
