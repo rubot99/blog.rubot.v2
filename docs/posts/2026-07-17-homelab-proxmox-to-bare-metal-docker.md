@@ -50,4 +50,4 @@ None of this is an argument that Proxmox was the wrong tool in general — it's 
 
 ## Coming up next
 
-Part 4 covers the reverse proxy sitting in front of these services — what's changing there and why.
+Part 4 covers what's actually running on these servers for media — Plex, Navidrome, Kavita, and Audiobookshelf.
