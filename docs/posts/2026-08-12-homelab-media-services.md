@@ -9,7 +9,7 @@ tags:
   - self-hosting
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # Home lab, part 4: self-hosted media services
