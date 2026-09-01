@@ -10,7 +10,7 @@ tags:
   - syncthing
 authors:
   - rubot
-draft: true
+draft: false
 ---
 
 # Home lab, part 5: splitting storage from compute
